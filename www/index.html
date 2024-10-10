@@ -28,7 +28,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-    <meta
+   <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"
     />
@@ -39,8 +39,110 @@
       content="initial-scale=1, width=device-width, viewport-fit=cover"
     />
     <meta name="color-scheme" content="light dark" />
-    <link rel="stylesheet" href="css/index.css" />
     <title>Hello World</title>
+    <style>
+      body {
+          font-family: 'Helvetica Neue', Arial, sans-serif;
+          background-color: #eaeaea;
+          margin: 0;
+          padding: 20px;
+          color: #444;
+          line-height: 1.6;
+      }
+
+      .app {
+          max-width: 600px;
+          margin: auto;
+          padding: 20px;
+          border-radius: 15px;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+          background-color: #ffffff;
+          transition: transform 0.3s;
+      }
+
+      .app:hover {
+          transform: scale(1.02);
+      }
+
+      h1 {
+          font-size: 26px;
+          color: #007BFF;
+          text-align: center;
+          margin-bottom: 20px;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      .container {
+          margin: 20px 0;
+          padding: 20px;
+          border: 1px solid #007BFF;
+          border-radius: 10px;
+          background-color: #f0f8ff;
+          transition: background-color 0.3s;
+      }
+
+      .container:hover {
+          background-color: #e0f4ff;
+      }
+
+      input[type="range"] {
+          width: 100%;
+          margin: 10px 0;
+          -webkit-appearance: none;
+          appearance: none;
+          background: #007BFF;
+          height: 6px;
+          border-radius: 5px;
+      }
+
+      input[type="range"]::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 20px;
+          height: 20px;
+          background: #ffffff;
+          border: 2px solid #007BFF;
+          border-radius: 50%;
+          cursor: pointer;
+      }
+
+      label {
+          display: block;
+          margin-bottom: 10px;
+          font-weight: bold;
+          color: #555;
+      }
+
+      .botao {
+          display: inline-block;
+          padding: 12px 24px;
+          font-size: 18px;
+          color: #ffffff;
+          background-color: #007BFF;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s, transform 0.3s;
+      }
+
+      .botao:hover {
+          background-color: #0056b3;
+          transform: translateY(-2px);
+      }
+
+      img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 10px;
+          margin-bottom: 10px;
+          border: 2px solid #007BFF;
+          transition: transform 0.3s;
+      }
+
+      img:hover {
+          transform: scale(1.05);
+      }
+    </style>
   </head>
   <body>
     <div class="app">
